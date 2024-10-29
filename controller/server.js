@@ -1,7 +1,20 @@
 const endpoint =  require ('./endpoints/endpoint');
-function main ()
+const DataClass = require('./endpoints/dataclass');
+
+class Server
 {
-    console.log("Hello World");
-    console.log(endpoint());
+    constructor()
+    {
+        this.endpoint = new endpoint();
+        this.dataclass= new DataClass();
+    
+    }
+    main()
+    {
+        console.log("Hello World");
+        console.log(this.endpoint.getMessage());
+        this.dataclass.test();
+    }
 }
-main()
+const server = new Server();
+server.main();
