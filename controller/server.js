@@ -1,16 +1,7 @@
-// Main class
-class Main
+const endpoint =  require ('./endpoints/endpoint');
+function main ()
 {
-    constructor
-    {
-        this.data=new DataTransfer('data.json');
-        this.endpoint = new Endpoint (this.data);
-    }
-    async run()
-    {
-        await this.endpoint.handleInput();
-    }
+    console.log("Hello World");
+    console.log(endpoint());
 }
-//Rub the main application
-const app = new Main();
-app.run();
+main()
